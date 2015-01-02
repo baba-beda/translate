@@ -45,6 +45,7 @@ public class SearchActivity extends Activity {
                 startActivity(i);
                 inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(),
                         InputMethodManager.RESULT_UNCHANGED_SHOWN);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }
         });
     }

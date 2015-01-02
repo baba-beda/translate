@@ -66,6 +66,7 @@ public class ResultActivity extends Activity {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             Intent i = new Intent(this, SearchActivity.class);
             startActivity(i);
+            overridePendingTransition(R.anim.left_in, R.anim.right_out);
             return true;
         }
         return super.onKeyDown(keyCode, event);
