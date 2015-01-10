@@ -33,7 +33,9 @@ public class DownloadImagesTask extends AsyncTask<String, Void, ArrayList<Bitmap
             photos = photosInterface.search(searchParameters, 10, 1);
             for (int i = 0; i < photos.size(); i++) {
                 Photo photo = photos.get(i);
-                URL photoURL = new URL("https://farm" + photo.getFarm() + ".static.flickr.com/" + photo.getServer() + "/" + photo.getId() + "_" + photo.getSecret() + "." + photo.getOriginalFormat());
+                URL photoURL = new URL("https://farm" + photo.getFarm() +
+                        ".static.flickr.com/" + photo.getServer() + "/" + photo.getId() +
+                        "_" + photo.getSecret() + "." + photo.getOriginalFormat());
                 InputStream in = photoURL.openStream();
                 result.add(BitmapFactory.decodeStream(in));
             }
