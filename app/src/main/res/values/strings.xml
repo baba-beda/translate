@@ -12,5 +12,6 @@
     <string name="button_text">Search</string>
     <string name="title_activity_search">What will we search for?</string>
     <string name="button_text_result">Something else?</string>
+    <string name="progress">"Translating...</string>
 
 </resources>
